@@ -1,0 +1,129 @@
+/* Variables CSS - Creative Portfolio */
+:root {
+    /* Color Palette - Vivid Cyberpunk Theme */
+    --primary: #6e00ff; /* Electric Purple */
+    --primary-light: #9d4edd;
+    --primary-dark: #3a0ca3;
+    --secondary: #00b4d8; /* Bright Cyan */
+    --secondary-light: #90e0ef;
+    --secondary-dark: #0077b6;
+    --accent: #ff0054; /* Hot Pink */
+    --accent-light: #ff5c8a;
+    --accent-tertiary: #ff7c43; /* Bright Orange */
+    --accent-quaternary: #ffdd00; /* Bright Yellow */
+    
+    /* Background Colors */
+    --bg-primary: #0f0e17; /* Near Black */
+    --bg-secondary: #1a1a2e;
+    --bg-tertiary: #16213e;
+    --card-bg: rgba(15, 14, 23, 0.6);
+    --card-bg-hover: rgba(30, 28, 46, 0.8);
+    
+    /* Glass Effect */
+    --glass-bg: rgba(15, 14, 23, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: rgba(0, 0, 0, 0.25);
+    --glass-highlight: rgba(255, 255, 255, 0.05);
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-tertiary: rgba(255, 255, 255, 0.6);
+    --text-muted: rgba(255, 255, 255, 0.4);
+    
+    /* Gradient Mixes */
+    --gradient-primary: linear-gradient(120deg, var(--primary), var(--primary-dark));
+    --gradient-secondary: linear-gradient(120deg, var(--secondary), var(--secondary-dark));
+    --gradient-accent: linear-gradient(120deg, var(--accent), var(--accent-light));
+    --gradient-mixed: linear-gradient(120deg, var(--primary), var(--accent));
+    --gradient-blue-purple: linear-gradient(120deg, var(--secondary), var(--primary));
+    --gradient-purple-pink: linear-gradient(120deg, var(--primary), var(--accent));
+    --gradient-cyan-purple: linear-gradient(120deg, var(--secondary), var(--primary-light));
+    --gradient-night-sky: linear-gradient(to bottom right, #1a1a2e, #0f0e17, #231942);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.5);
+    --shadow-glow-primary: 0 0 15px rgba(110, 0, 255, 0.5);
+    --shadow-glow-secondary: 0 0 15px rgba(0, 180, 216, 0.5);
+    --shadow-glow-accent: 0 0 15px rgba(255, 0, 84, 0.5);
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-xxl: 24px;
+    --radius-full: 9999px;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-very-slow: 0.8s ease;
+    --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+    --space-32: 8rem;
+    --space-40: 10rem;
+    --space-48: 12rem;
+    
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+    --font-size-7xl: 4.5rem;
+    --font-size-8xl: 6rem;
+    
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-loose: 1.8;
+    
+    /* Container width */
+    --container-width: 1200px;
+    
+    /* Z-indices */
+    --z-negative: -1;
+    --z-0: 0;
+    --z-10: 10;
+    --z-20: 20;
+    --z-30: 30;
+    --z-40: 40;
+    --z-50: 50;
+    --z-auto: auto;
+    
+    /* Blur effects */
+    --blur-sm: 4px;
+    --blur-md: 12px;
+    --blur-lg: 24px;
+    --blur-xl: 40px;
+  }
