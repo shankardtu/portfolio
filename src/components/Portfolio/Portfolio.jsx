@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Github, Linkedin, Mail, Phone, ExternalLink, Menu, X, Code, Server, Terminal, Database, Star, Zap, Award } from 'lucide-react';
 import './styles/index.css';
 
@@ -12,7 +12,7 @@ const Portfolio = () => {
   const cursorDotRef = useRef(null);
   const [typing, setTyping] = useState(true);
   const [typeIndex, setTypeIndex] = useState(0);
-  const titles = ["Software Engineer", "C/C++ Developer", "Cloud Architect", "eBPF Specialist"];
+  const titles = useMemo(() => ["Software Engineer", "C/C++ Developer", "Cloud Architect", "eBPF Specialist"], []);
   const [typeText, setTypeText] = useState("");
   
   // Mouse cursor effect
@@ -287,12 +287,12 @@ const Portfolio = () => {
                 <div className="code-snippet-container">
                   <pre className="code-snippet">
                     <code>
-                      <span className="code-comment">// A glimpse of who I am</span><br />
+                      <span className="code-comment">{'// A glimpse of who I am'}</span><br />
                       <span className="code-keyword">const</span> <span className="code-function">lokesh</span> = {"{"}
                       <br />
                       {"  "}<span className="code-property">passion</span>: <span className="code-string">"Building high-performance systems that scale"</span>,<br />
                       {"  "}<span className="code-property">strengths</span>: [<span className="code-string">"Problem Solving"</span>, <span className="code-string">"System Architecture"</span>, <span className="code-string">"Performance Optimization"</span>],<br />
-                      {"  "}<span className="code-property">experience</span>: <span className="code-number">4</span> <span className="code-comment">// years and counting</span><br />
+                      {"  "}<span className="code-property">experience</span>: <span className="code-number">4</span> <span className="code-comment">{'// years and counting'}</span><br />
                       {"}"};
                     </code>
                   </pre>
