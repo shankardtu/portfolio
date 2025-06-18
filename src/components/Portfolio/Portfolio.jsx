@@ -12,7 +12,7 @@ const Portfolio = () => {
   const cursorDotRef = useRef(null);
   const [typing, setTyping] = useState(true);
   const [typeIndex, setTypeIndex] = useState(0);
-  const titles = useMemo(() => ["Software Engineer", "C/C++ Developer", "Cloud Architect", "eBPF Specialist"], []);
+  const titles = useMemo(() => ["Full-Stack Engineer", "Cloud Architect", "React Developer", "AWS Specialist"], []);
   const [typeText, setTypeText] = useState("");
   
   // Mouse cursor effect
@@ -192,9 +192,9 @@ const Portfolio = () => {
                   </h2>
                 </div>
                 <p className="hero-description">
-                  A tech enthusiast with a passion for <span className="accent-text">high-performance systems</span>,
-                  <span className="accent-text"> cloud architecture</span>, and
-                  <span className="accent-text"> cutting-edge solutions</span>.
+                  A full-stack engineer with expertise in <span className="accent-text">cloud-native solutions</span>,
+                  <span className="accent-text"> secure distributed architectures</span>, and
+                  <span className="accent-text"> microservices on AWS</span>.
                 </p>
                 <div className="experience-chips">
                   <div className="experience-chip">
@@ -231,12 +231,12 @@ const Portfolio = () => {
                     <div className="profile-frame-effects"></div>
                   </div>
                   <div className="tech-stack-orbit">
-                    <div className="orbit-item orbit-item-1">C++</div>
+                    <div className="orbit-item orbit-item-1">Python</div>
                     <div className="orbit-item orbit-item-2">AWS</div>
                     <div className="orbit-item orbit-item-3">React</div>
-                    <div className="orbit-item orbit-item-4">eBPF</div>
-                    <div className="orbit-item orbit-item-5">Python</div>
-                    <div className="orbit-item orbit-item-6">Linux</div>
+                    <div className="orbit-item orbit-item-4">Flask</div>
+                    <div className="orbit-item orbit-item-5">Docker</div>
+                    <div className="orbit-item orbit-item-6">Lambda</div>
                   </div>
                 </div>
               </div>
@@ -262,26 +262,26 @@ const Portfolio = () => {
             <div className="about-content">
               <div id="about-content" className="animate-on-scroll">
                 <div className="about-summary">
-                  <span className="emphasis">Software Engineer (4 yrs)</span> who sweats the bits and the business value.
+                  <span className="emphasis">Full-stack engineer (4+ yrs)</span> delivering cloud-native Python & React solutions on AWS, with hands-on experience in system design, secure distributed architectures, and microservices.
                 </div>
                 <div className="about-cards">
                   <div className={`about-card glassy ${animated['about-content'] ? 'animated' : ''}`} style={{transitionDelay: '100ms'}}>
                     <Code className="card-icon" size={40} />
                     <div className="card-glow"></div>
-                    <h3 className="card-title">Kernel Development</h3>
-                    <p className="card-description">Embedded <span className="emphasis">eBPF packet tracing</span> into <span className="emphasis">AOSP kernels</span> and streamed telemetry for <span className="emphasis">150M</span> endpoints.</p>
+                    <h3 className="card-title">Cloud-Native Solutions</h3>
+                    <p className="card-description">Shipped high-scale SaaS products, streaming <span className="emphasis">600 GB/day</span>, monitoring <span className="emphasis">150M+ devices</span>, while improving system resiliency and DevOps velocity.</p>
                   </div>
                   <div className={`about-card glassy ${animated['about-content'] ? 'animated' : ''}`} style={{transitionDelay: '200ms'}}>
                     <Server className="card-icon" size={40} />
                     <div className="card-glow"></div>
-                    <h3 className="card-title">Optimized Services</h3>
-                    <p className="card-description">Designed Python/React services loading in <span className="emphasis">&lt; 80 ms</span> and slashed release cycles from <span className="emphasis">7 days to 5 hours</span>.</p>
+                    <h3 className="card-title">Secure Architecture</h3>
+                    <p className="card-description">Passionate about building <span className="emphasis">secure, user-friendly systems</span> following <span className="emphasis">Zero Trust and MFA principles</span>.</p>
                   </div>
                   <div className={`about-card glassy ${animated['about-content'] ? 'animated' : ''}`} style={{transitionDelay: '300ms'}}>
                     <Terminal className="card-icon" size={40} />
                     <div className="card-glow"></div>
-                    <h3 className="card-title">Innovation</h3>
-                    <p className="card-description"><span className="emphasis">open‑source contributor</span> with production-ready solutions.</p>
+                    <h3 className="card-title">Distributed Systems</h3>
+                    <p className="card-description">Proven ability to design and implement <span className="emphasis">microservices</span> and <span className="emphasis">event-driven architectures</span> on AWS.</p>
                   </div>
                 </div>
                 <div className="code-snippet-container">
@@ -290,9 +290,9 @@ const Portfolio = () => {
                       <span className="code-comment">{'// A glimpse of who I am'}</span><br />
                       <span className="code-keyword">const</span> <span className="code-function">lokesh</span> = {"{"}
                       <br />
-                      {"  "}<span className="code-property">passion</span>: <span className="code-string">"Building high-performance systems that scale"</span>,<br />
-                      {"  "}<span className="code-property">strengths</span>: [<span className="code-string">"Problem Solving"</span>, <span className="code-string">"System Architecture"</span>, <span className="code-string">"Performance Optimization"</span>],<br />
-                      {"  "}<span className="code-property">experience</span>: <span className="code-number">4</span> <span className="code-comment">{'// years and counting'}</span><br />
+                      {"  "}<span className="code-property">passion</span>: <span className="code-string">"Building secure, user-friendly cloud-native systems"</span>,<br />
+                      {"  "}<span className="code-property">strengths</span>: [<span className="code-string">"Distributed Systems"</span>, <span className="code-string">"Microservices"</span>, <span className="code-string">"AWS Cloud"</span>],<br />
+                      {"  "}<span className="code-property">experience</span>: <span className="code-number">4</span> <span className="code-comment">{'// years delivering production systems'}</span><br />
                       {"}"};
                     </code>
                   </pre>
@@ -374,8 +374,8 @@ const Portfolio = () => {
                   <div className="card-glow"></div>
                   <div className="cloud-skills">
                     {[
-                      'AWS Lambda', 'API Gateway', 'S3', 'EC2', 'DynamoDB', 'Jenkins', 
-                      'Docker', 'Linux Networking', 'eBPF', 'CI/CD', 'Datadog', 'Git'
+                      'AWS Lambda', 'API Gateway', 'S3', 'DynamoDB', 'Redshift', 'Kinesis', 'EC2', 'EMR',
+                      'Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'CI/CD', 'Git'
                     ].map((skill, index) => (
                       <div key={index} className="cloud-skill">
                         <div className="skill-dot"></div>
@@ -393,9 +393,9 @@ const Portfolio = () => {
                 <div className="card-glow"></div>
                 <div className="strength-tags">
                   {[
-                    'System Optimization', 'Performance Tuning', 'Security', 'Data Analytics',
-                    'APIs', 'Microservices', 'Cloud Infrastructure', 'Distributed Systems',
-                    'Team Leadership', 'Automation', 'Problem Solving', 'Kernel Development'
+                    'Cloud Native', 'Microservices', 'Event Driven Architecture', 'Distributed Systems',
+                    'JWT Auth', 'OAuth', 'Secure REST/GraphQL APIs', 'Linux Networking', 'eBPF',
+                    'System Design', 'DevOps', 'Zero Trust Security'
                   ].map((skill, index) => (
                     <span key={index} className="strength-tag">
                       {skill}
@@ -433,25 +433,29 @@ const Portfolio = () => {
                     <div className="card-glow"></div>
                     <h4 className="project-title">Kernel‑Level Network Activity Logging & Tracing</h4>
                     <ul className="project-details">
-                      <li>Modified the <span className="emphasis">Linux kernel</span> (C/C++, eBPF) for AOSP to trace packets, enabling real‑time capture with &lt; 2% CPU overhead.</li>
-                      <li>Utilised <span className="emphasis">sk_filter, cgroups and a Ring Buffer</span> to stream metadata to userspace, cutting field‑issue debug time by 40%.</li>
+                      <li>Prototyped <span className="emphasis">eBPF-based packet tracing</span> on AOSP Linux kernel.</li>
+                      <li>Streamed metadata to userspace via <span className="emphasis">sk_filter, cgroups, ring buffer</span> to aid debugging.</li>
                     </ul>
                   </div>
                   
                   <div className="project-card glassy">
                     <div className="card-glow"></div>
-                    <h4 className="project-title">Security Module for Anomaly and Threat Detection</h4>
+                    <h4 className="project-title">Telemetry Dashboard for Device & System Metrics Visualization</h4>
                     <ul className="project-details">
-                      <li>Co‑designed a data‑collection pipeline <span className="emphasis">(Python, AWS Lambda, DynamoDB)</span> that ingests 600 GB logs per day from 100 K endpoints, reducing incident triage time by 35%.</li>
+                      <li>Developed a <span className="emphasis">React SPA</span> with pie charts, bar graphs, and live telemetry metrics visualizing device/system health across <span className="emphasis">150M+ devices</span>.</li>
+                      <li>Designed and implemented <span className="emphasis">Python Flask REST APIs</span> using AWS Lambda, API Gateway, Athena, and DynamoDB, enabling scalable and low-latency telemetry data access.</li>
+                      <li>Integrated <span className="emphasis">GraphQL subscriptions</span> for real-time telemetry streaming to the dashboard.</li>
+                      <li>Automated <span className="emphasis">Docker CI/CD</span> with <span className="emphasis">GitHub Actions</span> to boost deployment speed and reliability.</li>
                     </ul>
                   </div>
                   
                   <div className="project-card glassy">
                     <div className="card-glow"></div>
-                    <h4 className="project-title">Development of an Advanced Telemetry Dashboard</h4>
+                    <h4 className="project-title">Distributed Test‑Automation Framework</h4>
                     <ul className="project-details">
-                      <li>Authored <span className="emphasis">REST APIs (Flask + Athena)</span> to fetch telemetry in &lt; 80 ms, and wired a serverless flow with API Gateway, Lambda, S3 and CloudWatch, saving $2 K/month in storage.</li>
-                      <li>Built a live <span className="emphasis">ReactJS dashboard</span> that surfaces the health of 150 M AnyConnect devices, boosting NOC productivity by 20%.</li>
+                      <li>Led design and development of a <span className="emphasis">Python + Pytest automation framework</span>, integrating 30 utilities and 13 test suites to cut manual testing from <span className="emphasis">7 days to 5 hours</span>.</li>
+                      <li>Engineered integrations with AWS services like <span className="emphasis">EC2, Elastic Beanstalk, S3, Glue, Lambda, and CloudWatch</span>, enabling comprehensive data metrics verification and system-wide consistency.</li>
+                      <li>Configured <span className="emphasis">Jenkins for CI/CD</span>, established an <span className="emphasis">Allure server</span> for reporting, and deployed <span className="emphasis">Docker</span> to streamline Allure server deployment.</li>
                     </ul>
                   </div>
                 </div>
@@ -470,7 +474,8 @@ const Portfolio = () => {
                     <div className="card-glow"></div>
                     <h4 className="project-title">Hotel Booking Service Platform</h4>
                     <ul className="project-details">
-                      <li>Designed a responsive booking UI and invoice <span className="emphasis">micro‑service</span>, increasing mobile conversion 12%.</li>
+                      <li>Developed a <span className="emphasis">React</span>-based booking UI with dynamic pricing and availability.</li>
+                      <li>Built an invoice microservice using <span className="emphasis">Python-Flask</span>, integrating with backend booking systems and secure payment APIs.</li>
                     </ul>
                   </div>
                   
@@ -478,8 +483,9 @@ const Portfolio = () => {
                     <div className="card-glow"></div>
                     <h4 className="project-title">Stock Exchange Platform Development</h4>
                     <ul className="project-details">
-                      <li>Wrote core trading <span className="emphasis">APIs (Flask, AWS Lambda, DynamoDB)</span> with P99 latency &lt; 60 ms, sustaining 10 K concurrent trades.</li>
-                      <li>Added unit tests to raise code coverage to 85%, cutting production bugs 10%.</li>
+                      <li>Engineered <span className="emphasis">Flask-based trading APIs</span> on <span className="emphasis">AWS Lambda</span> to support secure, high-throughput trading.</li>
+                      <li>Developed <span className="emphasis">React frontend</span> for trading workflows and user portfolio views.</li>
+                      <li>Improved test coverage and reduced post-release defects through <span className="emphasis">robust automation</span>.</li>
                     </ul>
                   </div>
                 </div>
@@ -620,7 +626,6 @@ const Portfolio = () => {
             </div>
           </div>
         </section>
-
         {/* Footer */}
         <footer className="footer">
           <div className="container">
