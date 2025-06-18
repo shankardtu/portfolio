@@ -281,7 +281,7 @@ const Portfolio = () => {
                     <Terminal className="card-icon" size={40} />
                     <div className="card-glow"></div>
                     <h3 className="card-title">Innovation</h3>
-                    <p className="card-description"><span className="emphasis">3rd‑place winner</span>, Cisco Global Hackathon 2024; <span className="emphasis">open‑source contributor</span> with production-ready solutions.</p>
+                    <p className="card-description"><span className="emphasis">open‑source contributor</span> with production-ready solutions.</p>
                   </div>
                 </div>
                 <div className="code-snippet-container">
@@ -432,7 +432,6 @@ const Portfolio = () => {
                   <div className="project-card glassy">
                     <div className="card-glow"></div>
                     <h4 className="project-title">Kernel‑Level Network Activity Logging & Tracing</h4>
-                    <p className="project-subtitle">3rd place – Cisco Global Hackathon 2025</p>
                     <ul className="project-details">
                       <li>Modified the <span className="emphasis">Linux kernel</span> (C/C++, eBPF) for AOSP to trace packets, enabling real‑time capture with &lt; 2% CPU overhead.</li>
                       <li>Utilised <span className="emphasis">sk_filter, cgroups and a Ring Buffer</span> to stream metadata to userspace, cutting field‑issue debug time by 40%.</li>
