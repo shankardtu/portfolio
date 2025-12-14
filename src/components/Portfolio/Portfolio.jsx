@@ -12,7 +12,7 @@ const Portfolio = () => {
   const cursorDotRef = useRef(null);
   const [typing, setTyping] = useState(true);
   const [typeIndex, setTypeIndex] = useState(0);
-  const titles = useMemo(() => ["Full-Stack Engineer", "Cloud Architect", "React Developer", "AWS Specialist"], []);
+  const titles = useMemo(() => ["System Architect", "Scale Engineer", "Cloud Infrastructure Lead", "Distributed Systems Expert"], []);
   const [typeText, setTypeText] = useState("");
   
   // Mouse cursor effect
@@ -72,7 +72,7 @@ const Portfolio = () => {
       setScrolled(position > 50);
       
       // Detect which section is in view
-      const sections = ['home', 'about', 'skills', 'experience', 'education', 'contact'];
+      const sections = ['home', 'about', 'skills', 'design', 'experience', 'education', 'contact'];
       sections.forEach(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -131,7 +131,7 @@ const Portfolio = () => {
           
           {/* Desktop Navigation */}
           <div className="desktop-nav">
-            {['home', 'about', 'skills', 'experience', 'education', 'contact'].map((section) => (
+            {['home', 'about', 'skills', 'design', 'experience', 'education', 'contact'].map((section) => (
               <button 
                 key={section}
                 onClick={() => scrollToSection(section)}
@@ -157,7 +157,7 @@ const Portfolio = () => {
         {mobileMenuOpen && (
           <div className="mobile-nav">
             <div className="mobile-nav-items">
-              {['home', 'about', 'skills', 'experience', 'education', 'contact'].map((section) => (
+              {['home', 'about', 'skills', 'design', 'experience', 'education', 'contact'].map((section) => (
                 <button 
                   key={section}
                   onClick={() => {
@@ -192,11 +192,15 @@ const Portfolio = () => {
                   </h2>
                 </div>
                 <p className="hero-description">
-                  A full-stack engineer with expertise in <span className="accent-text">cloud-native solutions</span>,
-                  <span className="accent-text"> secure distributed architectures</span>, and
-                  <span className="accent-text"> microservices on AWS</span>.
+                  Software Engineer (4.5 Yrs+) with expertise in <span className="accent-text">distributed data pipelines</span>,
+                  <span className="accent-text"> cloud-native systems</span>, and
+                  <span className="accent-text"> automation workflows at scale</span>.
                 </p>
                 <div className="experience-chips">
+                  <div className="experience-chip">
+                    <Star className="chip-icon" size={16} />
+                    <span>Amazon</span>
+                  </div>
                   <div className="experience-chip">
                     <Star className="chip-icon" size={16} />
                     <span>Cisco</span>
@@ -204,10 +208,6 @@ const Portfolio = () => {
                   <div className="experience-chip">
                     <Zap className="chip-icon" size={16} />
                     <span>Publicis Sapient</span>
-                  </div>
-                  <div className="experience-chip">
-                    <Award className="chip-icon" size={16} />
-                    <span>Samsung</span>
                   </div>
                 </div>
                 <div className="hero-actions">
@@ -223,20 +223,27 @@ const Portfolio = () => {
                 </div>
               </div>
               <div className="hero-visual">
-                <div className="profile-visual">
-                  <div className="profile-frame">
-                    <div className="profile-avatar">
-                      <span>LS</span>
+                <div className="impact-showcase">
+                  <div className="architecture-diagram">
+                    <div className="arch-node arch-node-left">
+                      <div className="node-label">High-Throughput</div>
+                      <div className="node-sublabel">600 GB/day</div>
                     </div>
-                    <div className="profile-frame-effects"></div>
+                    <div className="arch-connector arch-connector-top"></div>
+                    <div className="arch-node arch-node-center">
+                      <div className="node-label">Intelligent</div>
+                      <div className="node-sublabel">50% MTTR ↓</div>
+                    </div>
+                    <div className="arch-connector arch-connector-bottom"></div>
+                    <div className="arch-node arch-node-right">
+                      <div className="node-label">Secure at Scale</div>
+                      <div className="node-sublabel">40M+ Users</div>
+                    </div>
                   </div>
-                  <div className="tech-stack-orbit">
-                    <div className="orbit-item orbit-item-1">Python</div>
-                    <div className="orbit-item orbit-item-2">AWS</div>
-                    <div className="orbit-item orbit-item-3">React</div>
-                    <div className="orbit-item orbit-item-4">Flask</div>
-                    <div className="orbit-item orbit-item-5">Docker</div>
-                    <div className="orbit-item orbit-item-6">Lambda</div>
+                  <div className="expertise-layers">
+                    <div className="layer layer-1">Process Massive Data</div>
+                    <div className="layer layer-2">Automate Intelligence</div>
+                    <div className="layer layer-3">Protect at Scale</div>
                   </div>
                 </div>
               </div>
@@ -246,6 +253,44 @@ const Portfolio = () => {
                 <div className="wheel"></div>
               </div>
               <div className="scroll-text">Scroll Down</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Achievements Section */}
+        <section id="achievements" className="achievements-section">
+          <div className="container">
+            <div className="achievements-grid">
+              <div className="achievement-item">
+                <div className="achievement-icon">🏆</div>
+                <div className="achievement-metric">3rd Place</div>
+                <div className="achievement-label">Cisco Global Hackathon 2025</div>
+              </div>
+              <div className="achievement-item">
+                <div className="achievement-icon">⚡</div>
+                <div className="achievement-metric">600 GB/day</div>
+                <div className="achievement-label">Data Pipeline Throughput</div>
+              </div>
+              <div className="achievement-item">
+                <div className="achievement-icon">📊</div>
+                <div className="achievement-metric">150M+</div>
+                <div className="achievement-label">Devices at Scale</div>
+              </div>
+              <div className="achievement-item">
+                <div className="achievement-icon">🔒</div>
+                <div className="achievement-metric">40M+</div>
+                <div className="achievement-label">Secure Users Protected</div>
+              </div>
+              <div className="achievement-item">
+                <div className="achievement-icon">⏱️</div>
+                <div className="achievement-metric">50% ↓</div>
+                <div className="achievement-label">MTTR Reduction via AI-RCA</div>
+              </div>
+              <div className="achievement-item">
+                <div className="achievement-icon">💰</div>
+                <div className="achievement-metric">$2K/month</div>
+                <div className="achievement-label">Cloud Cost Optimization</div>
+              </div>
             </div>
           </div>
         </section>
@@ -262,26 +307,26 @@ const Portfolio = () => {
             <div className="about-content">
               <div id="about-content" className="animate-on-scroll">
                 <div className="about-summary">
-                  <span className="emphasis">Full-stack engineer (4+ yrs)</span> delivering cloud-native Python & React solutions on AWS, with hands-on experience in system design, secure distributed architectures, and microservices.
+                  <span className="emphasis">Software Engineer (4.5 Yrs+)</span> specializing in building <span className="emphasis">distributed data pipelines</span>, <span className="emphasis">cloud-native systems</span>, and <span className="emphasis">automation workflows at scale</span>. Led ingestion platforms processing <span className="emphasis">600 GB/day</span> from <span className="emphasis">100K+ endpoints</span>, dashboards for <span className="emphasis">150M+ devices</span>, and secure access systems for <span className="emphasis">40M+ users</span>.
                 </div>
                 <div className="about-cards">
                   <div className={`about-card glassy ${animated['about-content'] ? 'animated' : ''}`} style={{transitionDelay: '100ms'}}>
                     <Code className="card-icon" size={40} />
                     <div className="card-glow"></div>
-                    <h3 className="card-title">Cloud-Native Solutions</h3>
-                    <p className="card-description">Shipped high-scale SaaS products, streaming <span className="emphasis">600 GB/day</span>, monitoring <span className="emphasis">150M+ devices</span>, while improving system resiliency and DevOps velocity.</p>
+                    <h3 className="card-title">Data at Scale</h3>
+                    <p className="card-description">Built <span className="emphasis">600 GB/day ingestion pipelines</span> from <span className="emphasis">100K+ endpoints</span> with real-time processing and anomaly detection.</p>
                   </div>
                   <div className={`about-card glassy ${animated['about-content'] ? 'animated' : ''}`} style={{transitionDelay: '200ms'}}>
                     <Server className="card-icon" size={40} />
                     <div className="card-glow"></div>
-                    <h3 className="card-title">Secure Architecture</h3>
-                    <p className="card-description">Passionate about building <span className="emphasis">secure, user-friendly systems</span> following <span className="emphasis">Zero Trust and MFA principles</span>.</p>
+                    <h3 className="card-title">Systems & Infrastructure</h3>
+                    <p className="card-description">Architected <span className="emphasis">kernel-level tracing with eBPF</span>, event-driven workflows with <span className="emphasis">AWS Step Functions</span>, and secure identity systems.</p>
                   </div>
                   <div className={`about-card glassy ${animated['about-content'] ? 'animated' : ''}`} style={{transitionDelay: '300ms'}}>
                     <Terminal className="card-icon" size={40} />
                     <div className="card-glow"></div>
-                    <h3 className="card-title">Distributed Systems</h3>
-                    <p className="card-description">Proven ability to design and implement <span className="emphasis">microservices</span> and <span className="emphasis">event-driven architectures</span> on AWS.</p>
+                    <h3 className="card-title">AI-Powered RCA</h3>
+                    <p className="card-description">Built intelligent platform analyzing <span className="emphasis">logs & code changes</span> in real-time, <span className="emphasis">cutting MTTR by 50%</span>.</p>
                   </div>
                 </div>
                 <div className="code-snippet-container">
@@ -290,9 +335,9 @@ const Portfolio = () => {
                       <span className="code-comment">{'// A glimpse of who I am'}</span><br />
                       <span className="code-keyword">const</span> <span className="code-function">lokesh</span> = {"{"}
                       <br />
-                      {"  "}<span className="code-property">passion</span>: <span className="code-string">"Building secure, user-friendly cloud-native systems"</span>,<br />
-                      {"  "}<span className="code-property">strengths</span>: [<span className="code-string">"Distributed Systems"</span>, <span className="code-string">"Microservices"</span>, <span className="code-string">"AWS Cloud"</span>],<br />
-                      {"  "}<span className="code-property">experience</span>: <span className="code-number">4</span> <span className="code-comment">{'// years delivering production systems'}</span><br />
+                      {"  "}<span className="code-property">expertise</span>: <span className="code-string">"Distributed Pipelines, Cloud-Native Systems, eBPF"</span>,<br />
+                      {"  "}<span className="code-property">focus</span>: [<span className="code-string">"AWS Step Functions"</span>, <span className="code-string">"Event-Driven"</span>, <span className="code-string">"AI-RCA"</span>],<br />
+                      {"  "}<span className="code-property">experience</span>: <span className="code-number">4.5</span> <span className="code-comment">{'// years scaling production systems'}</span><br />
                       {"}"};
                     </code>
                   </pre>
@@ -374,8 +419,8 @@ const Portfolio = () => {
                   <div className="card-glow"></div>
                   <div className="cloud-skills">
                     {[
-                      'AWS Lambda', 'API Gateway', 'S3', 'DynamoDB', 'Redshift', 'Kinesis', 'EC2', 'EMR',
-                      'Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'CI/CD', 'Git'
+                      'AWS Lambda', 'API Gateway', 'S3', 'DynamoDB', 'Athena', 'Glue', 'EC2', 'Step Functions',
+                      'Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'CI/CD', 'Kafka'
                     ].map((skill, index) => (
                       <div key={index} className="cloud-skill">
                         <div className="skill-dot"></div>
@@ -393,14 +438,102 @@ const Portfolio = () => {
                 <div className="card-glow"></div>
                 <div className="strength-tags">
                   {[
-                    'Cloud Native', 'Microservices', 'Event Driven Architecture', 'Distributed Systems',
-                    'JWT Auth', 'OAuth', 'Secure REST/GraphQL APIs', 'Linux Networking', 'eBPF',
-                    'System Design', 'DevOps', 'Zero Trust Security'
+                    'Distributed Pipelines', 'Event-Driven Architecture', 'AWS Cloud', 'eBPF/Kernel',
+                    'OAuth 2.1', 'OIDC', 'SCIM', 'JWT', 'Token Exchange', 'Security/Identity',
+                    'Kafka', 'DynamoDB', 'System Design', 'Microservices', 'Linux Networking'
                   ].map((skill, index) => (
                     <span key={index} className="strength-tag">
                       {skill}
                     </span>
                   ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* System Design & Architecture Section */}
+        <section id="design" className="design-section">
+          <div className="section-header">
+            <div className="section-title-container">
+              <h2 className="section-title">System Design & Architecture</h2>
+              <div className="section-subtitle">HLD, LLD & DSA Expertise</div>
+            </div>
+          </div>
+          <div className="container">
+            <div id="design-content" className="design-content animate-on-scroll">
+              <div className="design-grid">
+                <div className={`design-card glassy ${animated['design-content'] ? 'animated' : ''}`} style={{transitionDelay: '100ms'}}>
+                  <div className="card-glow"></div>
+                  <div className="design-header">
+                    <div className="design-badge-large hld">HLD</div>
+                    <h3>High-Level Design</h3>
+                  </div>
+                  <div className="design-examples">
+                    <p className="design-label">Architectural Patterns:</p>
+                    <ul className="example-list">
+                      <li><span className="emphasis">Event-Driven Architecture</span> – AWS Step Functions, S3 triggers, async workflows</li>
+                      <li><span className="emphasis">Distributed Pipelines</span> – 600 GB/day ingestion, multi-stage processing</li>
+                      <li><span className="emphasis">Microservices</span> – Decoupled services, fault isolation, scaling</li>
+                      <li><span className="emphasis">API Gateway Patterns</span> – Rate limiting, auth, request routing (40M+ users)</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={`design-card glassy ${animated['design-content'] ? 'animated' : ''}`} style={{transitionDelay: '200ms'}}>
+                  <div className="card-glow"></div>
+                  <div className="design-header">
+                    <div className="design-badge-large lld">LLD</div>
+                    <h3>Low-Level Design</h3>
+                  </div>
+                  <div className="design-examples">
+                    <p className="design-label">Implementation Details:</p>
+                    <ul className="example-list">
+                      <li><span className="emphasis">eBPF/Kernel Programming</span> – Ring buffers, cgroups, syscall tracing (&lt;2% overhead)</li>
+                      <li><span className="emphasis">API Design</span> – REST/GraphQL, OpenAPI, &lt;60ms P99 latency</li>
+                      <li><span className="emphasis">Database Optimization</span> – Query design, indexing, saved $2K/month costs</li>
+                      <li><span className="emphasis">State Management</span> – JWT/OAuth 2.1, token exchange, identity delegation</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={`design-card glassy ${animated['design-content'] ? 'animated' : ''}`} style={{transitionDelay: '300ms'}}>
+                  <div className="card-glow"></div>
+                  <div className="design-header">
+                    <div className="design-badge-large dsa">DSA</div>
+                    <h3>Data Structures & Algorithms</h3>
+                  </div>
+                  <div className="design-examples">
+                    <p className="design-label">Optimization & Problem Solving:</p>
+                    <ul className="example-list">
+                      <li><span className="emphasis">Test Automation Framework</span> – 7 days → 5 hrs (parallelization, scheduling algorithms)</li>
+                      <li><span className="emphasis">Anomaly Detection</span> – Structured data processing, 35% faster triage</li>
+                      <li><span className="emphasis">RCA Analysis</span> – Graph traversal, log aggregation, root cause trees</li>
+                      <li><span className="emphasis">ETL Pipelines</span> – Data transformation, 99% quality, handling 100K+ endpoints</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className={`design-matrix glassy ${animated['design-content'] ? 'animated' : ''}`} style={{transitionDelay: '400ms'}}>
+                <h3 className="matrix-title">Design Expertise Matrix</h3>
+                <div className="matrix-grid">
+                  <div className="matrix-cell">
+                    <div className="matrix-label">Scale & Performance</div>
+                    <div className="matrix-scope">600 GB/day pipelines • 150M+ devices • 40M+ users • &lt;60ms P99</div>
+                  </div>
+                  <div className="matrix-cell">
+                    <div className="matrix-label">Distributed Systems</div>
+                    <div className="matrix-scope">Event-driven workflows • Microservices • Async processing • Fault tolerance</div>
+                  </div>
+                  <div className="matrix-cell">
+                    <div className="matrix-label">Security & Identity</div>
+                    <div className="matrix-scope">OAuth 2.1 • OIDC • Token Exchange • SCIM • JWT • SSO</div>
+                  </div>
+                  <div className="matrix-cell">
+                    <div className="matrix-label">Systems & Optimization</div>
+                    <div className="matrix-scope">eBPF/Kernel • Linux Networking • Query Optimization • Algorithm Design</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -419,43 +552,125 @@ const Portfolio = () => {
             <div id="experience-content" className="experience-content animate-on-scroll">
               {/* Timeline */}
               <div className="timeline">
-                {/* Cisco */}
+                {/* Amazon */}
                 <div className={`timeline-item ${animated['experience-content'] ? 'animated' : ''}`} style={{transitionDelay: '100ms'}}>
                   <div className="timeline-connector"></div>
                   <div className="timeline-marker"></div>
                   <div className="timeline-header">
-                    <h3 className="company-name">Cisco</h3>
-                    <p className="date">July 2022 - Present</p>
+                    <h3 className="company-name">Amazon</h3>
+                    <p className="date">Oct 2025 - Present</p>
                   </div>
-                  <p className="job-title">Software Engineer - II</p>
+                  <p className="job-title">SDE - II</p>
+                  
+                  <div className="project-card glassy">
+                    <div className="card-glow"></div>
+                    <h4 className="project-title">Event-Driven Workflow Automation</h4>
+                    <div className="design-badges">
+                      <span className="design-badge hld">HLD</span>
+                      <span className="design-badge arch">Architecture</span>
+                    </div>
+                    <ul className="project-details">
+                      <li>Designed event-driven job orchestration via <span className="emphasis">AWS Step Functions</span> and <span className="emphasis">S3 triggers</span>.</li>
+                      <li>Cut <span className="emphasis">1–2 hrs/week</span> of manual effort with reliable, hands-free execution.</li>
+                      <li>Orchestrated <span className="emphasis">multi-job workflows</span> with <span className="emphasis">audit trails, retry logic, and parallelism</span>.</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="project-card glassy">
+                    <div className="card-glow"></div>
+                    <h4 className="project-title">Oncall Assistant – AI-Powered Root Cause Analysis Platform</h4>
+                    <div className="design-badges">
+                      <span className="design-badge hld">HLD</span>
+                      <span className="design-badge lld">LLD</span>
+                      <span className="design-badge arch">System Design</span>
+                    </div>
+                    <ul className="project-details">
+                      <li>Built intelligent <span className="emphasis">RCA platform</span> analyzing <span className="emphasis">logs, traces, and code changes</span> in real-time.</li>
+                      <li><span className="emphasis">Cut MTTR by 30–50%</span>, saving <span className="emphasis">5–7 hrs/week</span> and improving incident investigation quality.</li>
+                      <li>Automated <span className="emphasis">RCA report generation</span> with actionable root causes and fix suggestions.</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                {/* Cisco */}
+                <div className={`timeline-item ${animated['experience-content'] ? 'animated' : ''}`} style={{transitionDelay: '200ms'}}>
+                  <div className="timeline-connector"></div>
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-header">
+                    <h3 className="company-name">Cisco</h3>
+                    <p className="date">July 2022 - Oct 2025</p>
+                  </div>
+                  <p className="job-title">Software Engineer - II & III</p>
+                  
+                  <div className="project-card glassy">
+                    <div className="card-glow"></div>
+                    <h4 className="project-title">Cross-App Access Platform (Duo + Resource Providers PoC)</h4>
+                    <div className="design-badges">
+                      <span className="design-badge hld">HLD</span>
+                      <span className="design-badge lld">LLD</span>
+                      <span className="design-badge sec">Security</span>
+                    </div>
+                    <ul className="project-details">
+                      <li>Designed <span className="emphasis">PoC enabling SSO</span> with <span className="emphasis">token exchange</span> for cross-platform access via Duo.</li>
+                      <li>Built service validating tokens and issuing delegated credentials using identity standards.</li>
+                      <li>Centralized authorization via <span className="emphasis">AWS Lambda</span>, improving security for <span className="emphasis">40M+ daily users</span>.</li>
+                    </ul>
+                  </div>
                   
                   <div className="project-card glassy">
                     <div className="card-glow"></div>
                     <h4 className="project-title">Kernel‑Level Network Activity Logging & Tracing</h4>
+                    <p className="project-details-note">3rd place – Cisco Global Hackathon 2025</p>
+                    <div className="design-badges">
+                      <span className="design-badge lld">LLD</span>
+                      <span className="design-badge dsa">DSA</span>
+                      <span className="design-badge sys">Systems</span>
+                    </div>
                     <ul className="project-details">
-                      <li>Prototyped <span className="emphasis">eBPF-based packet tracing</span> on AOSP Linux kernel.</li>
-                      <li>Streamed metadata to userspace via <span className="emphasis">sk_filter, cgroups, ring buffer</span> to aid debugging.</li>
+                      <li>Modified <span className="emphasis">AOSP kernel</span> using <span className="emphasis">C/eBPF</span> to trace packets with <span className="emphasis">&lt;2% CPU overhead</span>.</li>
+                      <li>Reduced debug effort by <span className="emphasis">40%</span> with real-time telemetry streamed from userspace.</li>
                     </ul>
                   </div>
                   
                   <div className="project-card glassy">
                     <div className="card-glow"></div>
-                    <h4 className="project-title">Telemetry Dashboard for Device & System Metrics Visualization</h4>
+                    <h4 className="project-title">Security Module for Anomaly and Threat Detection</h4>
+                    <div className="design-badges">
+                      <span className="design-badge hld">HLD</span>
+                      <span className="design-badge dsa">DSA</span>
+                      <span className="design-badge arch">Pipeline</span>
+                    </div>
                     <ul className="project-details">
-                      <li>Developed a <span className="emphasis">React SPA</span> with pie charts, bar graphs, and live telemetry metrics visualizing device/system health across <span className="emphasis">150M+ devices</span>.</li>
-                      <li>Designed and implemented <span className="emphasis">Python Flask REST APIs</span> using AWS Lambda, API Gateway, Athena, and DynamoDB, enabling scalable and low-latency telemetry data access.</li>
-                      <li>Integrated <span className="emphasis">GraphQL subscriptions</span> for real-time telemetry streaming to the dashboard.</li>
-                      <li>Automated <span className="emphasis">Docker CI/CD</span> with <span className="emphasis">GitHub Actions</span> to boost deployment speed and reliability.</li>
+                      <li>Built <span className="emphasis">serverless ingestion pipeline</span> processing <span className="emphasis">600 GB/day</span> from <span className="emphasis">100K endpoints</span>.</li>
+                      <li>Improved <span className="emphasis">triage speed by 35%</span> through structured anomaly detection data.</li>
                     </ul>
                   </div>
                   
                   <div className="project-card glassy">
                     <div className="card-glow"></div>
-                    <h4 className="project-title">Distributed Test‑Automation Framework</h4>
+                    <h4 className="project-title">Advanced Telemetry Dashboard</h4>
+                    <div className="design-badges">
+                      <span className="design-badge hld">HLD</span>
+                      <span className="design-badge lld">LLD</span>
+                      <span className="design-badge dsa">Optimization</span>
+                    </div>
                     <ul className="project-details">
-                      <li>Led design and development of a <span className="emphasis">Python + Pytest automation framework</span>, integrating 30 utilities and 13 test suites to cut manual testing from <span className="emphasis">7 days to 5 hours</span>.</li>
-                      <li>Engineered integrations with AWS services like <span className="emphasis">EC2, Elastic Beanstalk, S3, Glue, Lambda, and CloudWatch</span>, enabling comprehensive data metrics verification and system-wide consistency.</li>
-                      <li>Configured <span className="emphasis">Jenkins for CI/CD</span>, established an <span className="emphasis">Allure server</span> for reporting, and deployed <span className="emphasis">Docker</span> to streamline Allure server deployment.</li>
+                      <li>Delivered <span className="emphasis">REST APIs</span> and <span className="emphasis">serverless backend</span> powering dashboards for <span className="emphasis">150M+ devices</span>.</li>
+                      <li>Reduced <span className="emphasis">cloud storage costs by $2K/month</span> with optimized data query design.</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="project-card glassy">
+                    <div className="card-glow"></div>
+                    <h4 className="project-title">Distributed Test ‑ Automation Framework</h4>
+                    <div className="design-badges">
+                      <span className="design-badge dsa">DSA</span>
+                      <span className="design-badge hld">HLD</span>
+                      <span className="design-badge arch">Framework</span>
+                    </div>
+                    <ul className="project-details">
+                      <li>Cut <span className="emphasis">regression test time from 7 days to 5 hrs</span> with <span className="emphasis">PyTest + AWS-based automation</span>.</li>
+                      <li>Boosted <span className="emphasis">ETL data quality to 99%</span> and <span className="emphasis">reduced release defects by 25%</span>.</li>
                     </ul>
                   </div>
                 </div>
@@ -472,26 +687,21 @@ const Portfolio = () => {
                   
                   <div className="project-card glassy">
                     <div className="card-glow"></div>
-                    <h4 className="project-title">Hotel Booking Service Platform</h4>
+                    <h4 className="project-title">Trading Platform & Flask APIs</h4>
+                    <div className="design-badges">
+                      <span className="design-badge lld">LLD</span>
+                      <span className="design-badge dsa">DSA</span>
+                      <span className="design-badge perf">Performance</span>
+                    </div>
                     <ul className="project-details">
-                      <li>Developed a <span className="emphasis">React</span>-based booking UI with dynamic pricing and availability.</li>
-                      <li>Built an invoice microservice using <span className="emphasis">Python-Flask</span>, integrating with backend booking systems and secure payment APIs.</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="project-card glassy">
-                    <div className="card-glow"></div>
-                    <h4 className="project-title">Stock Exchange Platform Development</h4>
-                    <ul className="project-details">
-                      <li>Engineered <span className="emphasis">Flask-based trading APIs</span> on <span className="emphasis">AWS Lambda</span> to support secure, high-throughput trading.</li>
-                      <li>Developed <span className="emphasis">React frontend</span> for trading workflows and user portfolio views.</li>
-                      <li>Improved test coverage and reduced post-release defects through <span className="emphasis">robust automation</span>.</li>
+                      <li>Built <span className="emphasis">Flask APIs with &lt;60 ms P99 latency</span>, supporting <span className="emphasis">10K+ concurrent trading users</span>.</li>
+                      <li>Designed <span className="emphasis">UI and invoicing flows</span> that <span className="emphasis">increased mobile conversion by 12%</span>.</li>
                     </ul>
                   </div>
                 </div>
                 
                 {/* Samsung */}
-                <div className={`timeline-item ${animated['experience-content'] ? 'animated' : ''}`} style={{transitionDelay: '500ms'}}>
+                <div className={`timeline-item ${animated['experience-content'] ? 'animated' : ''}`} style={{transitionDelay: '400ms'}}>
                   <div className="timeline-marker"></div>
                   <div className="timeline-header">
                     <h3 className="company-name">Samsung Digital Academy</h3>
@@ -501,9 +711,15 @@ const Portfolio = () => {
                   
                   <div className="project-card glassy">
                     <div className="card-glow"></div>
+                    <h4 className="project-title">Cryptographic Algorithms & Secure Data Transmission Research</h4>
+                    <div className="design-badges">
+                      <span className="design-badge lld">LLD</span>
+                      <span className="design-badge dsa">DSA</span>
+                      <span className="design-badge perf">Performance</span>
+                    </div>
                     <ul className="project-details">
-                      <li>Contributed to a project focusing on scalable security solutions using <span className="emphasis">C and OpenSSL</span>.</li>
-                      <li>Conducted research on <span className="emphasis">cryptographic algorithms</span> and secure communication system designs.</li>
+                      <li>Developed and benchmarked <span className="emphasis">cryptographic algorithms</span> using <span className="emphasis">C and OpenSSL</span>, optimizing for embedded systems.</li>
+                      <li>Researched <span className="emphasis">scalable approaches</span> to secure data transmission with performance analysis on resource-constrained devices.</li>
                     </ul>
                   </div>
                 </div>
@@ -535,7 +751,15 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className="education-details">
-                  <p>Notable coursework in data structures, algorithms, computer networks, operating systems, and database management.</p>
+                  <p className="coursework-label">Key Coursework:</p>
+                  <div className="coursework-tags">
+                    <span>Data Structures</span>
+                    <span>Algorithms</span>
+                    <span>OS & Networking</span>
+                    <span>Databases</span>
+                    <span>System Design</span>
+                    <span>Distributed Computing</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -546,81 +770,65 @@ const Portfolio = () => {
         <section id="contact" className="contact-section">
           <div className="section-header">
             <div className="section-title-container">
-              <h2 className="section-title">Get In Touch</h2>
-              <div className="section-subtitle">Let's Connect</div>
+              <h2 className="section-title">Let's Work Together</h2>
+              <div className="section-subtitle">Build infrastructure that scales</div>
             </div>
           </div>
           <div className="container">
             <div id="contact-content" className="contact-content animate-on-scroll">
-              <div className="contact-grid">
-                <div className={`contact-info ${animated['contact-content'] ? 'animated' : ''} slide-right`}>
-                  <h3 className="contact-subtitle">Contact Information</h3>
-                  <div className="contact-methods">
-                    <a href="mailto:shankardtu21@gmail.com" className="contact-method glassy magnetic" data-magnetic>
-                      <div className="card-glow"></div>
-                      <div className="contact-icon-container">
-                        <Mail className="contact-icon" size={20} />
+              <div className="contact-layout-two-col">
+                {/* Left Column - Contact Methods */}
+                <div className={`contact-col left-col ${animated['contact-content'] ? 'animated' : ''}`} style={{transitionDelay: '100ms'}}>
+                  <h3 className="col-section-title">Connect</h3>
+                  <div className="contact-list">
+                    <a href="mailto:shankardtu21@gmail.com" className="contact-item">
+                      <div className="contact-item-icon">
+                        <Mail size={24} />
                       </div>
-                      <div className="contact-details">
-                        <p className="contact-type">Email</p>
-                        <p className="contact-value">shankardtu21@gmail.com</p>
-                      </div>
-                    </a>
-                    
-                    <a href="tel:+917291871525" className="contact-method glassy magnetic" data-magnetic>
-                      <div className="card-glow"></div>
-                      <div className="contact-icon-container">
-                        <Phone className="contact-icon" size={20} />
-                      </div>
-                      <div className="contact-details">
-                        <p className="contact-type">Phone</p>
-                        <p className="contact-value">+91 72918 71525</p>
+                      <div className="contact-item-content">
+                        <span className="contact-item-label">Email</span>
+                        <span className="contact-item-value">shankardtu21@gmail.com</span>
                       </div>
                     </a>
-                    
-                    <a href="https://linkedin.com/in/shankardtu21" target="_blank" rel="noopener noreferrer" 
-                      className="contact-method glassy magnetic" data-magnetic>
-                      <div className="card-glow"></div>
-                      <div className="contact-icon-container">
-                        <Linkedin className="contact-icon" size={20} />
+                    <a href="https://linkedin.com/in/shankardtu21" target="_blank" rel="noopener noreferrer" className="contact-item">
+                      <div className="contact-item-icon">
+                        <Linkedin size={24} />
                       </div>
-                      <div className="contact-details">
-                        <p className="contact-type">LinkedIn</p>
-                        <p className="contact-value">@shankardtu21</p>
+                      <div className="contact-item-content">
+                        <span className="contact-item-label">LinkedIn</span>
+                        <span className="contact-item-value">shankardtu21</span>
                       </div>
-                      <ExternalLink size={16} className="external-link-icon" />
+                    </a>
+                    <a href="https://github.com/shankardtu" target="_blank" rel="noopener noreferrer" className="contact-item">
+                      <div className="contact-item-icon">
+                        <Github size={24} />
+                      </div>
+                      <div className="contact-item-content">
+                        <span className="contact-item-label">GitHub</span>
+                        <span className="contact-item-value">shankardtu</span>
+                      </div>
                     </a>
                   </div>
                 </div>
-                
-                <div className={`contact-card ${animated['contact-content'] ? 'animated' : ''} slide-left`} style={{transitionDelay: '200ms'}}>
-                  <div className="contact-card-background"></div>
-                  <h3 className="contact-card-title">Let's Connect</h3>
-                  <p className="contact-card-description">
-                    Whether you have a project in mind, job opportunity, or just want to say hello, I'd love to hear from you.
-                  </p>
-                  
-                  <div className="availability-list">
-                    <div className="availability-item">
-                      <div className="availability-indicator"></div>
-                      <p>Open to remote opportunities</p>
-                    </div>
-                    <div className="availability-item">
-                      <div className="availability-indicator"></div>
-                      <p>Available for consulting</p>
-                    </div>
-                    <div className="availability-item">
-                      <div className="availability-indicator"></div>
-                      <p>Interested in collaborative projects</p>
-                    </div>
+
+                {/* Right Column - CTA + Info */}
+                <div className={`contact-col right-col ${animated['contact-content'] ? 'animated' : ''}`} style={{transitionDelay: '200ms'}}>
+                  {/* CTA Section */}
+                  <div className="cta-section">
+                    <p className="cta-message">Let's talk about building next-generation infrastructure</p>
+                    <a href="mailto:shankardtu21@gmail.com" className="cta-button primary magnetic" data-magnetic>
+                      Start a Conversation
+                    </a>
                   </div>
-                  
-                  <a href="https://github.com/shankardtu" target="_blank" rel="noopener noreferrer" 
-                    className="github-link magnetic" data-magnetic>
-                    <Github size={18} />
-                    <span>Check out my GitHub</span>
-                    <ExternalLink size={14} />
-                  </a>
+
+                  {/* Availability */}
+                  <div className="availability-info">
+                    <div className="availability-label">
+                      <span className="status-dot"></span>
+                      <span>Actively exploring</span>
+                    </div>
+                    <div className="availability-locations">Remote • India • Relocation Open</div>
+                  </div>
                 </div>
               </div>
             </div>

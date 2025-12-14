@@ -50,12 +50,28 @@
     border-radius: var(--radius-full);
   }
   
+  /* Contact section header - minimal style */
+  #contact .section-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+  }
+  
+  #contact .section-title::after {
+    display: none;
+  }
+  
   .section-subtitle {
     font-size: var(--font-size-base);
     color: var(--text-tertiary);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     margin-top: var(--space-2);
+  }
+  
+  #contact .section-subtitle {
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
   }
   
   /* Hero Section Layout */
