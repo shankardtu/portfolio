@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { Github, Linkedin, Mail, Phone, ExternalLink, Menu, X, Code, Server, Terminal, Database, Star, Zap, Award } from 'lucide-react';
+import { Github, Linkedin, Mail, Menu, X, Code, Server, Terminal, Database, Star, Zap } from 'lucide-react';
 import './styles/index.css';
 
 const Portfolio = () => {
