@@ -32,10 +32,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: |
-          npm config delete proxy || true
-          npm config delete https-proxy || true
-          npm ci --registry=https://registry.npmjs.org/
+        run: npm ci
 
       - name: Build
         run: npm run build
