@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { Github, Linkedin, Mail, Menu, X, Code, Server, Terminal, Database, Star, Zap } from 'lucide-react';
 import './styles/index.css';
 
